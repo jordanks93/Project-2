@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/ehardek/Project-2-Group-3/issues"
   },
-  "homepage": "https://github.com/ehardek/Project-2-Group-3#readme"
+  "homepage": "https://github.com/ehardek/Project-2-Group-3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-passport": "^0.1.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  }
 }
