@@ -1,4 +1,4 @@
-USE users_db;
+USE user_playlist_db;
 
 INSERT INTO users (user_name, email) 
 VALUES ("testuser1", "email1@email.com");
