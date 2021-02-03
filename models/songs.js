@@ -32,6 +32,11 @@ module.exports = function (sequelize, DataTypes) {
             },
         },
 
+        genre: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+
     });
 
     Songs.associate = (models) => {
