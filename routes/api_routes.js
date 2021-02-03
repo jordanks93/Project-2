@@ -47,4 +47,14 @@ module.exports = function (app) {
 
     });
 
+    app.post("/api/signup", function(req, res) {
+        db.Users.create({
+          user_name: req.body.user_name,
+          email: req.body.email
+        }).then(function() {
+            res.redirect("/");
+        });
+          
+      });
+
 };
