@@ -1,12 +1,18 @@
 
 
 html{
-    background-color: rgba(117, 122, 11, 0.5);
+background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
 
+}
+
+.page-heading {
+ text-shadow: black 0 0 2px, rgba(0, 0, 0, 0.377) 3px 2px 1px;
+ letter-spacing: 1.5px;
 }
 
 div{
     color: snow;
+    letter-spacing: 1px;
 }
 
 .green-text{
@@ -16,7 +22,7 @@ div{
 }
 
 body{
-    background:  linear-gradient(to top, #31213a85 0%, #3b3f235d 52%, #4a1c4e81 100%);
+    background:  linear-gradient(to top, #31213a44 0%, #3b3f2326 52%, #4a1c4e42 100%);
     margin: 0px !important;
     min-height: 100vh;   
     padding: 11px 15px !important;
@@ -36,8 +42,8 @@ body{
 
 }
 
-h2{
-    color: blue; 
+h2, li{
+    color: rgb(179, 255, 0); 
     font-size: 120%;
 }
 
@@ -106,7 +112,8 @@ form button{
     border:2px solid #0b140265;
     padding:10px 20px;
     border-radius: 6px;
-    box-shadow: rgba(13, 31, 27, 0.322) -2px -1px 4px 6px;
+    box-shadow: rgba(28, 29, 28, 0.226) 1px 1px 4px;
+    letter-spacing: 1px;
 
 }
 
@@ -125,7 +132,7 @@ footer{
 
 form{
     background-color: rgba(30, 36, 49, 0.932);
-    padding-top: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
