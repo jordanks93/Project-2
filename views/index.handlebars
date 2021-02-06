@@ -1,0 +1,70 @@
+<!-- HEAD  IN MAIN-HBS ------------- -->
+    
+    <div id="center" class="wrapper">
+        <div class="webkit">
+            <table class="outer" align="center">
+
+
+
+                <!--  MAIN ROW 1 of 3 (contains table) ------------------ -->
+                <tr>
+                    <td>
+
+                        <!--  TABLE ------------------ -->
+                        <table width="100%">
+                            <tr>
+                                <td style="background-color:#A62508;padding:10px;text-align: center;">
+                                    <a href="" style="color:#A62508"><img src="https://www.pinclipart.com/picdir/big/358-3585488_png-file-svg-headphones-icon-png-free-clipart.png" width="80" alt=""></a>
+                                    <p style="border:2px solid #2a2a2a">Inbox Playlists</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--  TABLE ------------------ -->
+                    </td>
+                </tr>
+                 <!-- END: MAIN ROW  1 of 3  ------------------ -->
+
+
+
+                 <!--    MAIN ROW 2 of 3 (Contains "inside inbox" and "outside comfort zone")------------------ -->
+                <tr>
+                    <td style="background-image:url('https://images.unsplash.com/photo-1473396413399-6717ef7c4093?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+                        background-size:600px;text-align:center;">
+                        <p style="color:#D9CECC;margin-top:100px;background: #110000;width:400px;margin-left: auto;">
+                        Inside your inbox
+                        </p>
+                        <br>
+                        <p style="color:#D9CECC;background: #110000;width:400px;margin-right: auto;">
+                        Outside your comfort zone
+                        </p>    
+                        
+                    </td>
+                </tr>
+                 <!--  END: MAIN ROW 2 of 3 ------------------ -->
+
+
+
+                <!--  MAIN ROW 3 of 3 (**ROW WHERE PLAYLIST ELEMENTS WILL RENDER**)------------------ -->
+                <form>  
+                    <tr>
+                        <td style="background:#D9CECC;border:2px solid #2a2a2a;">
+                        <p style="text-align:center;">
+                            Make a playlist:
+                        </p>
+                        <br>
+                        <ul>  
+                            {{#each songs }}
+                            
+                                {{> songs/song }}  
+                            
+                            {{/each}}
+                        </ul>
+
+                        </td>
+                    </tr>
+                </form>
+                <!-- END:  ROW WHERE PLAYLIST ELEMENTS WILL RENDER ------------------ -->
+
+            </table>
+        </div> <!-- End div class=Webkit (Check if CSS styles applied before removing class)-->
+    </div> <!-- End div #center (was </center>)-->
