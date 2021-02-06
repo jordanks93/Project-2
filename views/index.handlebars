@@ -1,7 +1,7 @@
 <!-- HEAD  IN MAIN-HBS ------------- -->
     
-    <div id="center" class="wrapper">
-        <div class="webkit">
+    <main id="center" class="wrapper">
+        <div class="inside-wrapper">
             <table class="outer" align="center">
 
 
@@ -10,7 +10,7 @@
                 <tr>
                     <td>
 
-                        <!--  TABLE ------------------ -->
+                        <!--   ------------------ -->
                         <table width="100%">
                             <tr>
                                 <td style="background-color:#A62508;padding:10px;text-align: center;">
@@ -19,12 +19,10 @@
                                 </td>
                             </tr>
                         </table>
-                        <!--  TABLE ------------------ -->
+                        <!-- ------------------ -->
                     </td>
                 </tr>
                  <!-- END: MAIN ROW  1 of 3  ------------------ -->
-
-
 
                  <!--    MAIN ROW 2 of 3 (Contains "inside inbox" and "outside comfort zone")------------------ -->
                 <tr>
@@ -40,13 +38,11 @@
                         
                     </td>
                 </tr>
-
-                <!-- ??  need to end  other table rows or data elements?--> 
-                
+         
             </table>
                  <!--  END: MAIN ROW 2 of 3 ------------------ -->
 
-                                        <!-- remove post method later -->
+                                        <!-- remove post method if using AJAX or Fetch APIs-->
                 <form action="/api/signup" method="post" id="signup" class="search-form">
                     <div>
                     <b>Enter username: </b>
@@ -57,7 +53,7 @@
                     <button type="submit">Sign up</button> 
                 </form>
 
-                <!--  MAIN ROW 3 of 3 (**ROW WHERE PLAYLIST ELEMENTS WILL RENDER**)------------------ -->
+                <!--  MAIN ROW 3 of 3 (ROW WHERE PLAYLIST ELEMENTS  RENDER)------------------ -->
                 <form action="/api/songs/genre"  id="form1" class="search-form">
                     <div>
                         <div style="background:#D9CECC;border:2px solid #2a2a2a;">
@@ -75,30 +71,22 @@
                                 <option value="Rock">Rock</option>
                             </select>
                             <button type="submit" id="search-submit">Update playlist</button> 
-                        </div>  <!-- end div "search area"  -->
-                        
-                        <div id="genre-area">
+                        </div>             
+                            <div id="result-area">
+                            <!-- --------------------------- -->
+                                <ul>  
+                                    {{#each songs }}
+                                    
+                                        {{> songs/song }}  
+                                    
+                                    {{/each}}
 
-                        </div>
-                        
-                        <div id="result-area">
-
-                          <!-- --------------------------- -->
-                        <ul>  
-                            {{#each songs }}
-                            
-                                {{> songs/song }}  
-                            
-                            {{/each}}
-
-                        </ul>
-
-                        </div>
-
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </form>
                 <!-- END:  ROW WHERE PLAYLIST ELEMENTS WILL RENDER ------------------ -->
 
-        </div> <!-- End div class=Webkit (Check if CSS styles applied before removing class)-->
-    </div> <!-- End div #center (was </center>)-->
+        </div> 
+    </main>  <!-- end ".wrapper"  --> 
