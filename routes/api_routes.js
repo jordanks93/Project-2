@@ -42,23 +42,26 @@ module.exports = function (app) {
 
     });
 
-
-
 // ------------------------------------------ 
 
 // user signup for email 
 
 app.post("/api/signup", function(req, res) {
+
+    console.log("req.body.user_name: ");
+    console.log(req.body.user_name);
+    console.log("req.body.email: ");
+    console.log(req.body.email);
+    
     db.Users.create({
       user_name: req.body.user_name,
       email: req.body.email
     }).then(function() {
+        //console.log(res);
         res.redirect("/");
-    });
-      
+    });    
+
   });
-
-
 
 // ------------------------------------------ 
 

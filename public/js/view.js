@@ -24,15 +24,13 @@ function renderSong(data) {
 }
 
     console.log("setting submit handler");
-    // - - - Create new burger - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - 
+    // - - -  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - 
     $("#form1").on("submit", function(event){
         console.log("handling submit event");
         event.preventDefault();
 
-
        let selectedGenre =  $("#genre-dropdown").val();
 
-        // send new http GET request
         $.ajax("/api/songs/" + selectedGenre, {
             type: "GET",
 
@@ -43,4 +41,4 @@ function renderSong(data) {
     });
 
 
-}); // - - - - - End of main jquery function  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - 
+}); 
