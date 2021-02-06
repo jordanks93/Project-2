@@ -3,6 +3,32 @@ var db = require("../models");
 
 module.exports = function (app) {
 
+    app.get("/", function(req, res){
+        db.Songs.findAll().then(function(data) {
+
+
+        let songArr = []; 
+        for(let i = 0; i < data.length; i++) {
+            songArr.push(data[i].dataValues);
+        }
+         //console.log(data);
+        console.log(songArr);
+       
+
+        var hbsObject = {
+        // songs  (look for clarification on 
+        // caps for sequelize models vs. tables)              
+        songs: songArr
+          };
+    
+        // (render the handlebars object to html document)
+        res.render("index", hbsObject);
+        });
+    });
+    
+ 
+
+
     // Request all playlists
     app.get("/api/playlist", function (req, res) {
 
