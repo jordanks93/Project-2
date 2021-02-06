@@ -40,31 +40,60 @@
                         
                     </td>
                 </tr>
+
+                <!-- ??  need to end  other table rows or data elements?--> 
+                
+            </table>
                  <!--  END: MAIN ROW 2 of 3 ------------------ -->
 
-
-
                 <!--  MAIN ROW 3 of 3 (**ROW WHERE PLAYLIST ELEMENTS WILL RENDER**)------------------ -->
-                <form>  
-                    <tr>
-                        <td style="background:#D9CECC;border:2px solid #2a2a2a;">
-                        <p style="text-align:center;">
-                            Make a playlist:
-                        </p>
-                        <br>
+                <form action="/api/songs/genre"  id="form1" class="search-form">
+                    <div>
+                        <div style="background:#D9CECC;border:2px solid #2a2a2a;">
+                        <p style="text-align:center;"> Your playlist: </p>
+                        
+                        <!-- --------------------------- -->
+                        
+                        <div id="search-area">
+                            <label>Filter by genre </label>
+                            <select id="genre-dropdown" name="genre">
+                                <option value="alternative" selected="selected">
+                                    Alternative
+                                </option>
+                                <option value="Rap">Rap</option>
+                                <option value="Rock">Rock</option>
+                            </select>
+                            <button type="submit" id="search-submit">Update playlist</button> 
+                        </div>  <!-- end div "search area"  -->
+                        
+                        <div id="genre-area">
+
+                        </div>
+                        
+                        <div id="result-area">
+
+                          <!-- --------------------------- -->
                         <ul>  
                             {{#each songs }}
                             
                                 {{> songs/song }}  
                             
                             {{/each}}
+
+                        <!---   Genre filter attempt 
+                                  {{#each songs }}
+                            
+                                {{> songs/song }}  --> 
+                            
+                            {{/each}}
                         </ul>
 
-                        </td>
-                    </tr>
+                        </div>
+
+                        </div>
+                    </div>
                 </form>
                 <!-- END:  ROW WHERE PLAYLIST ELEMENTS WILL RENDER ------------------ -->
 
-            </table>
         </div> <!-- End div class=Webkit (Check if CSS styles applied before removing class)-->
     </div> <!-- End div #center (was </center>)-->
