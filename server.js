@@ -11,6 +11,7 @@ const db = require('./models');
 const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));
+
 app.set("view engine", "handlebars");
 
 // Sets up the Express app to handle data parsing
