@@ -1,0 +1,146 @@
+<div class="container">
+    <main id="center" class="wrapper">
+        <div class="inside-wrapper">
+            <!--  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- -->
+            <section id="app-logo-section">
+                <table class="outer" align="center">
+                   
+                            <table width="100%">
+                                <tr>
+                                    <td style="background-color:#A62508;padding:10px;text-align: center;">
+                                        <a href="" style="color:#A62508"><img src="https://www.pinclipart.com/picdir/big/358-3585488_png-file-svg-headphones-icon-png-free-clipart.png" width="80" alt=""></a>
+                                        <p style="border:2px solid #2a2a2a">Inbox Playlists</p>
+                                    </td>
+                                </tr>
+                            </table>
+                    
+                </table>
+            </section> <!-- End 'app-logo-section' --> 
+
+            <!--  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- -->
+            <!--  Main section with contol -->
+            <section id="user-form-input-section">
+                <div class="accordion" id="USER-INPUT-FORMS-ACCORDION">
+                    <div class="card">
+                        <div class="card-header" id="accordion-heading-one">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#expandable-one" aria-expanded="true" aria-controls="expandable-one">
+                                🡾   Option 1: Add songs to the database
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="expandable-one" class="collapse show" aria-labelledby="accordion-heading-one" data-parent="#USER-INPUT-FORMS-ACCORDION">
+                        <div class="card-body">
+
+                            <!-- accrdn-content --> 
+                                 <form  id="song-form" class="user-form">
+                                    <div class="">
+                                        <ul class="" id="song-form-list">
+                                            <li>Song name: </li>
+                                                  <input type="text" id="song_name" name="song_name" required="" placeholder="name of song"> </input>
+                                            <li>Artist name: </li>
+                                                 <input type="text" id="artist" name="artist" required="" placeholder="name of artist"> </input>
+                                            <li>Album name: </li>
+                                                 <input type="text" id="album" name="album" required="" placeholder="if song was released on an album"> </input> <!-- Should validate: max 4 digits. digits only -->
+                                            <li>Release year: </li>
+                                            <input type="number"id="year" name="year" required="" placeholder="year this song was released"> </input>
+                                            <li>Genre: </li>
+                                               <input type="text" id="genre" name="genre" required="" placeholder="song genre"> </input>
+                                            <button type="submit">Add song</button> 
+                                        </ul>
+                                    </div>
+                                </form>
+                            <!-- /accrdn-collapsible-content --> 
+                        </div>
+
+                      </div>
+                    </div>
+
+                     <!--  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- -->
+                    <hr>
+
+                    <div class="card">
+                        <div class="card-header" id="accordion-heading-two">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable-two" aria-expanded="false" aria-controls="expandable-two">
+                              🡾  Option 2: Make a genre playlist (Filter playlist to specific genre type)
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="expandable-two" class="collapse" aria-labelledby="accordion-heading-two" data-parent="#USER-INPUT-FORMS-ACCORDION">
+                        
+                        <div class="card-body">
+                            <!-- accrdn-content --> 
+                            <form action="/api/songs/genre"  id="form1" class="search-form">    
+                                <div id="search-area">
+                                    <div>
+                                        <label>Filter by genre </label>
+                                        <select id="genre-dropdown" name="genre">
+                                            <option value="alternative" selected="selected">Alternative</option>
+                                            <option value="Rap">Rap</option>
+                                            <option value="Rock">Rock</option>
+                                        </select>
+
+                                        <button type="submit" id="search-submit">Update playlist</button> 
+                                    </div> 
+                                </div>
+                            </form> 
+                            <!-- /accrdn-content --> 
+                            </div>
+                        </div>
+                    </div>
+
+                     <!--  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- -->
+                    <hr>
+
+                    <div class="card">
+                        <div class="card-header" id="accordion-heading-three">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable-three" aria-expanded="true" aria-controls="expandable-three">
+                       🡾   Happy with the song selection? Enter your email to sign up for the playlist email. 
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="expandable-three" class="collapse" aria-labelledby="accordion-heading-three" data-parent="#USER-INPUT-FORMS-ACCORDION">
+                            <div class="card-body">
+                        
+                                <form action="/api/signup" method="post" id="signup" class="search-form">
+                                    <div>
+                                        <li>
+                                            <ul>Enter a username: </ul>
+                                                <input type="text" name="user_name" placeholder="your name"> </input>
+                                            <ul>Enter email: </ul>
+                                            <input type="text"name="email" required="required" placeholder="your email"> </input>
+                                        </li>
+                                    </div>
+                                    <button type="submit">Sign up</button> 
+                                </form>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end outer accordion div --> 
+            </section>  <!-- end #user-form-input-section -->
+            
+            <hr>
+            <!--  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- -->
+
+            <section id="playlist-render-section">
+                <form>
+                    <div style="background:#D9CECC;border:2px solid #2a2a2a;">
+                        <p style="text-align:center;"> Your playlist: </p>
+                        <div id="result-area">
+                        <ul>  
+                            {{#each songs }}
+                                    
+                                {{> songs/song }}  
+                                    
+                            {{/each}}
+                        </ul>
+                    </div>
+                </form>  
+            </section>  <!-- end #playlist-render-section -->
+            <!--  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- -->
+        </div> 
+    </main>  <!-- end ".wrapper"  --> 
+</div>
