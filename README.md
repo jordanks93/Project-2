@@ -3,6 +3,9 @@
   ## Description
   This application will generate music playlists for the user based on genre. The user can submit their email and username to recieve a playlist they select. 
 
+  ![Demo1](./public/img/demo1.jpg)
+  ![Demo2](./public/img/demo2.jpg)
+
   # Table of Contents
   * [Installation](#installation)
   * [Credits](#credits)
@@ -17,11 +20,7 @@
   * MySQL Workbench 
 
   ### Link to live application host on heroku:
-<<<<<<< HEAD
-  ![Heroku App Link](https://email-playlist.herokuapp.com/)
-=======
   [Heroku App Link](https://email-playlist.herokuapp.com/)
->>>>>>> 0fdd2d1d5ae4852c87f093668aba28785d45ae4c
 
   ## To Run the application locally:
   1. Clone the repo from github
@@ -46,13 +45,8 @@
     * github: settc
 
   - Evan Hardek
-<<<<<<< HEAD
-    * email: 
-    * github: 
-=======
     * email: evanhardek@gmail.com
     * github: ehardek
->>>>>>> 0fdd2d1d5ae4852c87f093668aba28785d45ae4c
 
   - Jordan Stuckman 
     * email: jordanks93@gmail.com
@@ -65,8 +59,4 @@
   If you have any questions or feedback, contact us by email or reach out on github.
 
   ## License
-<<<<<<< HEAD
   MIT
-=======
-  MIT
->>>>>>> 0fdd2d1d5ae4852c87f093668aba28785d45ae4c
