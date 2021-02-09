@@ -47,19 +47,19 @@
                         </div>
                         <div id="expandable-one" class="collapse show" aria-labelledby="accordion-heading-one" data-parent="#USER-INPUT-FORMS-ACCORDION">
                         <div class="card-body">
-                            <!-- accrdn-content --> 
-                                <form action="/api/song" method="post" id="song-form" class="user-form">
+                            <!-- accrdn-content   action="/api/song"  --> 
+                                <form  id="song-form" class="user-form">
                                     <div>
                                         <b>Song name: </b>
-                                            <input type="text" name="song_name" required="" placeholder="name of song"> </input>
+                                            <input type="text" id="song_name" name="song_name" required="" placeholder="name of song"> </input>
                                         <b>Arist name: </b>
-                                            <input type="text"name="artist" required="" placeholder="name of artist"> </input>
+                                            <input type="text" id="artist" name="artist" required="" placeholder="name of artist"> </input>
                                         <b>Album name: </b>
-                                            <input type="text"name="album" required="" placeholder="if song was released on an album"> </input> <!-- Should validate: max 4 digits. digits only -->
+                                            <input type="text" id="album" name="album" required="" placeholder="if song was released on an album"> </input> <!-- Should validate: max 4 digits. digits only -->
                                         <b>Release year: </b>
-                                            <input type="number"name="year" required="" placeholder="year this song was released"> </input>
+                                            <input type="number"id="year" name="year" required="" placeholder="year this song was released"> </input>
                                         <b>Genre: </b>
-                                            <input type="number"name="genre" required="" placeholder="song genre"> </input>
+                                            <input type="text" id="genre" name="genre" required="" placeholder="song genre"> </input>
                                         <button type="submit">Add song</button> 
                                     </div>
                                 </form>
